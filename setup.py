@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
-dependencies = ['python3-ldap',]
+dependencies = ['python3-ldap==0.5.2-alpha',]
 
 setup(
     name = 'nusstalker',
     packages = ['nusstalker'],
-    version = '0.7',
+    version = '0.8',
     description = 'Stalk people in NUS',
     author = 'Jason Yeo',
     author_email = 'jasonyeo88@gmail.com',
