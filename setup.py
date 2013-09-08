@@ -3,9 +3,9 @@ from setuptools import setup, find_packages
 dependencies = ['python3-ldap',]
 
 setup(
-    name = 'nus-stalker',
-    packages = ['nus-stalker'],
-    version = '0.2',
+    name = 'nusstalker',
+    packages = ['nusstalker'],
+    version = '0.7',
     description = 'Stalk people in NUS',
     author = 'Jason Yeo',
     author_email = 'jasonyeo88@gmail.com',

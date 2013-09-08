@@ -78,7 +78,7 @@ def person_search(c, query):
         return []
 
 def get_roster(c, module_code):
-    filter_by = "(memberOf=CN=MODULE{0},OU=Modules,OU=Student,DC=stu,DC=nus,DC=edu,DC=sg)".format(query.upper())
+    filter_by = "(memberOf=CN=MODULE{0},OU=Modules,OU=Student,DC=stu,DC=nus,DC=edu,DC=sg)".format(module_code.upper())
     found = c.search(basedn, filter_by, SEARCH_SCOPE_WHOLE_SUBTREE,
                       attributes = ['displayName', 'memberOf', 'name'])
     if found:
@@ -87,8 +87,9 @@ def get_roster(c, module_code):
         return []
 
 
-def connect_nus():
-    user, pw = read_config()
+def connect_nus(user="", pw=""):
+    if user == "" or pw == "":
+        user, pw = read_config()
     servername = "ldapstu.nus.edu.sg"
     # define a basic authentication server
     s = server.Server(servername, port = 389)
