@@ -13,10 +13,10 @@ Just use pip!
 There are currently two functions. You can either search for any person in NUS or
 browse the class roster for a module.
 
-    from nusstalker.main import *
-    c = connect_nus(user="nusstu\A00123", pw="secret")
-    person_search(c, "jason")
-    get_roster(c, "CS1010S")
+    from nusstalker.main import NusStalker
+    s = NusStalker(user="nusstu\A00123", pw="secret")
+    s.search_by_name("jason")
+    s.search_by_module("CS1010S")
 
 ## Credits
 [Fazli's](http://github.com/fuzzie360) nus-stalker in javascript - https://github.com/fuzzie360/nus-stalker/
